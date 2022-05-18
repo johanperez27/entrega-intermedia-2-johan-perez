@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.header_logo {
+    width: 200px;
+    height:72.5px;
+    object-fit: cover;
+    margin-left: 10%;
+}
+
+.header_nav {
+    margin-right: 12%;
+    display: flex;
+    list-style:none;
+}
+
+.header_link {
+    font-family: 'Lato', sans-serif;
+    font-size:14px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 5px;
+    padding: 10px;
+    color: #47654d;
+}
+
+.header_link:hover {
+    background-color:#47654d;
+    color:azure;
+}
+
+
+
+.galeria {
+    margin-top: 1rem;
+    margin-left: 0;
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+
+.galeria_imgPlantas {
+    width: 100%;
+    object-fit: cover;
+}
+
+.galeria_vivero {
+    font-family: 'Lato', sans-serif;
+    background-color: rgba(5, 102, 74, 0.3);
+    position: absolute;
+    padding: 1rem;
+    border-radius: 8px;
+    color:#f3faf8;
+    margin-bottom: 1rem;
+    text-align: center;
+    
+}
+
+.productos {
+    margin-bottom: 4rem;
+}
+
+.productos_titulos {
+    font-family: 'Raleway', sans-serif;
+    font-size:36px;
+    font-weight: 300;
+    margin:30px 0;
+    text-align: center;
+}
+
+
+.productos_surtido {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: center;
+    max-height: 220px;
+}
+
+.fotosSurtido {
+    width: 33%;
+    object-fit: cover;
+    position: relative;
+}
+
+
+
+.product_imagen {
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    border: 2px solid rgba(205, 228, 221, 0.3);
+    animation-name: scale-up-center;
+    animation-duration:1s;
+}
+
+
+@keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+}
+  
+
+.centro {
+    margin: 0 2rem;
+}
+
+.productos_texto {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    text-shadow: 1px 1px 3px rgb(0 0 0);
+    font-weight: 700;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color:whitesmoke;
+}
+
+.video {
+    display: flex;
+    justify-content:flex-end;
+    align-items:flex-end;
+    max-width: 100%;
+    height:480px;
+    margin-left: 18%;
+    margin-right: 18%;
+    margin-bottom: 4rem;
+}
+
+.video_iframe {
+    width: 100%;
+    height: 100%
+}
+
+.nuestra {
+    background-image: url(../images/Nuestra_empresa.jpg);
+    object-fit: cover;
+    background-repeat: round;
+    max-width: 100%;
+    height: 330px;
+    margin: 0 7%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.texto_nuestra {
+    text-align: center;
+    justify-content:center;
+    position: absolute;
+    margin: 0 20%;
+    color: aliceblue;
+    font-size:18px;
+    font-weight: normal;
+}
+
+.textoNuestra {
+    max-width: 720px;
+    position: absolute;
+    color: #f3faf8;
+    font: size xx-large;
+}
+
+
+
+.gran-footer {
+    height: 80px;
+    max-width: 90rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-texto {
+    display: flex;
+    margin-left: 100px;
+    text-align: center;
+    line-height: 80px;
+}
+
+.footer-img {
+    width: 18px;
+    height: 28px;
+    flex-wrap: wrap;
+}
+
+.footer-menu {
+    display: flex;
+    margin-right: 100px;
+    list-style: none;
+    line-height: 100px;
+}
+
+.footer-menu-item {
+    font-size: 1rem;
+    margin-left: 2rem;
+}
+
+/* AQUI VAMOS CON EL MENU HAMURGUESA */
+#burger {
+    display: none;
+    outline:none;
+}
+
+
+.container-burger {
+    height: 19px;
+    width: 19px;
+    cursor: pointer;
+    border: 1px solid;
+    position: relative;
+    border:0;
+    display: none;
+
+}
+
+.linea {
+    height: 10%;
+    width: 75%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.linea-top {
+    top: 25%;
+}
+
+.linea-low {
+    top: 75%;
+}
+
+.custom-checkbox:checked + .label-burger .container-burger .linea-med {
+    opacity: 0
+}
+
+.custom-checkbox:checked + .label-burger .container-burger .linea-top {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: red;
+}
+
+.custom-checkbox:checked + .label-burger .container-burger .linea-low {
+    background-color: red;
+    transform: rotate(-45deg) translate(-50%, -50%);
+    top: 22%;
+    left: 43%;
+}
+
+
+/* AQUI FINALIZAMOS CON EL MENU HAMURGUESA */
+
+@media only screen and (min-width:320px) and (max-device-width:600px) {
+    .container-burger {
+        display: flex;
+        height: 36px;
+        width: 36px;
+        align-items: center;
+        margin-right: 3rem;
+    }
+
+    .custom-checkbox:checked + .label-burger .container-burger .linea-low {
+        background-color: red;
+        transform: rotate(-45deg) translate(-50%, -50%);
+        top: 24%;
+        left: 45%;
+    }
+
+    .header_nav {
+        flex-direction: column;
+        background-color: #0000EC ;
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        align-items: center;
+        transform: translate(100%);
+        height: calc(100% - 80px);
+    }
+
+    .custom-checkbox:checked ~ .header_nav {
+        transform: translate(0%);
+        transition: all 0.2s ease;
+    }
+
+}
